@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1750227697465,
+      "tag": "0000_products_table_created",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1750234413323,
+      "tag": "0001_added_company_to_product_and_created_company_table",
+      "breakpoints": true
+    }
+  ]
+}

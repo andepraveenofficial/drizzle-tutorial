@@ -1,18 +1,19 @@
 # Drizzle Queries
 
-### Create Schema
+### Create Schema Note
 - Use Table Names as PascalCase
-- We can write prisma like syntax and raw-sql queries also
+- Database TableName should be plural (eg: products, users)
+
 
 <details>
 <summary>Database Interactions</summary>
 
 ## Database Interaction
 
-- Relationships
-- Cascade : delete Parent Child also delete
-- Filtering
-- Searching
+1. CRUD
+2. Pagination
+3. Filter
+4. Joins
 
 ### scripts
 1. generate -> generae the sql schema
@@ -20,3 +21,6 @@
 3. studio -> open database like studio
 
 </details>
+
+---
+
