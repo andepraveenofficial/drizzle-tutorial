@@ -1,0 +1,31 @@
+{
+  "name": "06-demo-app",
+  "version": "1.0.0",
+  "description": "1. Create Node Environment : `npm init -y`\r 2. Add typescript : `npm install -D typescript`\r 3. Add typescript configuration File : `npx tsc --init`, Change the configuration",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/src/index.js",
+    "dev": "nodemon --exec ts-node ./src/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate":"drizzle-kit migrate",
+    "db:studio":"drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.3",
+    "@types/pg": "^8.15.4",
+    "drizzle-kit": "^0.31.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.2",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.1"
+  }
+}

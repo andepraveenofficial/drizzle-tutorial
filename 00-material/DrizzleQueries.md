@@ -24,3 +24,26 @@
 
 ---
 
+<details>
+<summary>Schemas</summary>
+
+### Schemas
+- indexing
+- methods
+</details>
+
+---
+
+<details>
+<summary>Relations</summary>
+
+## Relations
+- one-to-one
+- one-to-many
+- many-to-one
+- many-to-many
+
+</details>
+
+---
+

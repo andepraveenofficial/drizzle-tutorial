@@ -1,12 +1,8 @@
-# Practice Drizzle Queries
+# Drizzle Schema
 
-## Database Interaction
-
-1. CRUD
-2. Pagination
-3. Filter
-4. Joins
-
+### Notation
+- Database ColumnNames : snake_case
+- Typescript Object Keys : camelCase
 
 ### scripts
 1. generate -> generate the migration files (sql schema)

@@ -1,0 +1,1 @@
+CREATE INDEX "price_idx" ON "products" USING btree ("price");
