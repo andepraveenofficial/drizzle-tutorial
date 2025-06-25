@@ -8,6 +8,13 @@
       "when": 1750336054897,
       "tag": "0000_curved_bishop",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1750845531799,
+      "tag": "0001_rainy_boom_boom",
+      "breakpoints": true
     }
   ]
 }
