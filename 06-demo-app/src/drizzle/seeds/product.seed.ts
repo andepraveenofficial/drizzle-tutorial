@@ -7,6 +7,7 @@ export const seedProducts = async () => {
 	await db.delete(ProductTable);
 	console.log("✅ ProductTable data deleted successfully.");
 
+	/*
 	// Products to seed
 	const data = [
 		{
@@ -30,6 +31,18 @@ export const seedProducts = async () => {
 			quantity: 50,
 		},
 	];
+	*/
+
+	const data = [];
+
+	for (let i = 1; i <= 5000; i++) {
+		const product = {
+			name: `Product ${i}`,
+			quantity: i * 10,
+		};
+		data.push(product);
+	}
+
 	console.log("🌱 Seeding product data...");
 	await db.insert(ProductTable).values(data);
 	console.log("✅ Products seeded successfully.");

@@ -15,6 +15,20 @@
       "when": 1750240766503,
       "tag": "0001_added_index_to_price_in_the_products_table",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1750873673029,
+      "tag": "0002_steady_naoko",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1750873864736,
+      "tag": "0003_warm_sumo",
+      "breakpoints": true
     }
   ]
 }
