@@ -1,13 +1,11 @@
 # Drizzle Schema
 
-### Notation
-- Database ColumnNames : snake_case
-- Typescript Object Keys : camelCase
-
 ### scripts
+
 1. generate -> generate the migration files (sql schema)
-2. apply schema to the database
+2. migrate -> apply schema to the database
 3. studio -> open drizzle studio
+
 ```json
 "scripts":{
   "db:generate": "drizzle-kit generate",
@@ -17,22 +15,19 @@
 ```
 
 #### migrations
-1. Create migration : `npx drizzle-kit generate`
-2. migration file name : `npx drizzle-kit generate --name=usersTable` 
-  -  eg: `npx drizzle-kit generate --name=products_table_created`
-1. Delete migraions : `npx drizzle-kit drop`
-1. Open drizzle studio : `npx drizzle-kit studio`
-1. Migrate to Database : `npx drizzle-kit migrate`
-1. Migrate to Databse : `npx drizzle-kit push` -> Only for development
 
+1. Create migration file : `npx drizzle-kit generate`
+2. create migration file with migration fileName : `npx drizzle-kit generate --name=usersTable`
+3. Delete migraions : `npx drizzle-kit drop`
+4. apply migration file to Database : `npx drizzle-kit migrate`
+5. Open drizzle studio : `npx drizzle-kit studio`
+6. Migrate to Databse : `npx drizzle-kit push` -> Only for development
 
 ### Installation
+
 - `npm install`
 
 ### Start the Application
+
 - development : `npm run dev`
 - production : `npm start`
-
-
-
-
