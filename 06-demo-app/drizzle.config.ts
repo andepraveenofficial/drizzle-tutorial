@@ -1,16 +1,16 @@
 import { defineConfig } from "drizzle-kit";
 export default defineConfig({
-  dialect: 'postgresql',
-  schema: './src/drizzle/schema',
-  out: "./src/drizzle/migrations", 
-  dbCredentials:{
-  host: "localhost",
-  port: 5432,
-  user: "postgres",
-  password: "andepraveen",
-  database: "drizzle4",
-  ssl: false, // Research on this SSL
-  },
-    verbose: true,
-    strict: true
-})
+	dialect: "postgresql", // type of database
+	schema: "./src/drizzle/schema/index.ts", // Path to your schema files
+	out: "./src/drizzle/migrations", // generated migration files
+	dbCredentials: {
+		host: "localhost",
+		port: 5432,
+		user: "postgres",
+		password: "andepraveen",
+		database: "drizzle4",
+		ssl: false, // Research on this SSL
+	},
+	verbose: true,
+	strict: true,
+});

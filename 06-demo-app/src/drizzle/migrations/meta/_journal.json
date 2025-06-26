@@ -15,6 +15,13 @@
       "when": 1750845531799,
       "tag": "0001_rainy_boom_boom",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1750919683807,
+      "tag": "0002_fine_piledriver",
+      "breakpoints": true
     }
   ]
 }

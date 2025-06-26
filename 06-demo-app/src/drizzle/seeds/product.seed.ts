@@ -1,10 +1,10 @@
 import { db } from "../db";
-import { ProductTable } from "../schema/product";
+import schema from "../schema";
 
 export const seedProducts = async () => {
 	// Delete all existing products
 	console.log("🗑️  Deleting existing ProductTable data...");
-	await db.delete(ProductTable);
+	await db.delete(schema.ProductTable);
 	console.log("✅ ProductTable data deleted successfully.");
 
 	/*
@@ -44,6 +44,6 @@ export const seedProducts = async () => {
 	}
 
 	console.log("🌱 Seeding product data...");
-	await db.insert(ProductTable).values(data);
+	await db.insert(schema.ProductTable).values(data);
 	console.log("✅ Products seeded successfully.");
 };
