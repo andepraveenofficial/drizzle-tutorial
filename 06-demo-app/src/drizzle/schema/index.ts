@@ -1,3 +1,3 @@
-import { ProductTable } from "./product";
+import { ProductTable } from "./product.schema";
 
 export default { ProductTable };

@@ -12,5 +12,5 @@ Content-Type: application/json
 
 {
   "name":"Google",
-  "price":50000
+  "quantity":50000
 }

@@ -2,16 +2,24 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { Client } from "pg";
 
 const client = new Client({
-  host: "localhost",
-  port: 5432,
-  user: "postgres",
-  password: "andepraveen",
-  database: "drizzle4",
+	host: "localhost",
+	port: 5432,
+	user: "postgres",
+	password: "andepraveen",
+	database: "drizzle4",
 });
 
 const connectToDatabase = async () => {
-  await client.connect();
-  console.log("Connected to the database");
+	try {
+		console.log("🐘 Connecting to PostgreSQL database...");
+		await client.connect();
+		console.log("✅ 🛢️  Database connection successful!");
+		console.log("🗃️  Ready to use Drizzle ORM!");
+		console.log("");
+	} catch (error) {
+		console.log("❌ Failed to connect to the database!");
+		console.error(error);
+	}
 };
 
 const db = drizzle(client);
