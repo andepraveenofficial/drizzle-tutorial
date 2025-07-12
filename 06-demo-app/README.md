@@ -128,7 +128,7 @@ export default defineConfig({
 "db:seed": "ts-node ./src/drizzle/seeds/main.seed.ts"
 ```
 
-- Seeds : `npm run seed`
+- Seeds : `npm run db:seed`
 
 ### Installation
 

@@ -35,7 +35,7 @@ export const seedProducts = async () => {
 
 	const data = [];
 
-	for (let i = 1; i <= 5000; i++) {
+	for (let i = 1; i <= 5; i++) {
 		const product = {
 			name: `Product ${i}`,
 			quantity: i * 10,

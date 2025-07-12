@@ -1,0 +1,28 @@
+### Variables
+@baseUrl = http://localhost:5000
+
+### 01 Home 
+GET {{baseUrl}}
+
+### 02 All Products
+GET {{baseUrl}}/products
+
+### Trasaction ###
+
+### 01 Add Product -> without transaction
+POST {{baseUrl}}/products1
+Content-Type: application/json
+
+{
+  "name":"Google 11",
+  "quantity":50000
+}
+
+### 02 Add Product -> with transaction
+POST {{baseUrl}}/products2
+Content-Type: application/json
+
+{
+  "name":"Google 6",
+  "quantity":50000
+}
