@@ -2,6 +2,8 @@ import express, { Request, Response } from "express";
 import { db, connectToDatabase } from "./drizzle/db";
 import { ProductTable } from "./drizzle/schema/product.schema";
 import { unitOfWork } from "./utils/unitOfWork";
+import { PgQueryResultHKT, PgTransaction } from "drizzle-orm/pg-core";
+import { ExtractTablesWithRelations } from "drizzle-orm";
 
 const app = express();
 
@@ -101,7 +103,13 @@ app.post("/products3", async (req: Request, res: Response) => {
 	try {
 		const productData = req.body;
 
-		const fn = async (trx: any) => {
+		const fn = async (
+			trx: PgTransaction<
+				PgQueryResultHKT,
+				Record<string, never>,
+				ExtractTablesWithRelations<Record<string, never>>
+			>
+		) => {
 			const newProduct1 = await trx
 				.insert(ProductTable)
 				.values(productData)
