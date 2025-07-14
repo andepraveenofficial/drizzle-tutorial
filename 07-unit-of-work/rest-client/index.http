@@ -26,3 +26,12 @@ Content-Type: application/json
   "name":"Google 6",
   "quantity":50000
 }
+
+### 03 Add Product -> unitOfWork
+POST {{baseUrl}}/products3
+Content-Type: application/json
+
+{
+  "name":"Google 6",
+  "quantity":50000
+}

@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import { db, connectToDatabase } from "./drizzle/db";
 import { ProductTable } from "./drizzle/schema/product.schema";
+import { unitOfWork } from "./utils/unitOfWork";
 
 const app = express();
 
@@ -96,3 +97,37 @@ app.post("/products2", async (req: Request, res: Response) => {
 /* -----> UnitOfWork <----- */
 
 // 01 transaction using as a unit of work
+app.post("/products3", async (req: Request, res: Response) => {
+	try {
+		const productData = req.body;
+
+		const fn = async (trx: any) => {
+			const newProduct1 = await trx
+				.insert(ProductTable)
+				.values(productData)
+				.returning();
+			console.log(newProduct1);
+
+			// Simulate delay (optional)
+			await new Promise((resolve) => setTimeout(resolve, 5000));
+
+			// Simulate failure (optional)
+			// throw new Error("Forced Error");
+
+			const newProduct2 = await trx
+				.insert(ProductTable)
+				.values(productData)
+				.returning();
+			console.log(newProduct2);
+			return { newProduct1, newProduct2 };
+		};
+
+		const result = await unitOfWork(fn);
+
+		console.log("transaction completed");
+
+		res.send(result);
+	} catch (error) {
+		res.status(500).send({ error: "Transaction failed", details: error });
+	}
+});
