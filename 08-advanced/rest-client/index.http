@@ -1,0 +1,16 @@
+@baseUrl = http://localhost:5000
+
+### 01 Home 
+GET {{baseUrl}}
+
+### 02 All Products
+GET {{baseUrl}}/products
+
+### 03 Add Product
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "name":"Google",
+  "quantity":50000
+}
